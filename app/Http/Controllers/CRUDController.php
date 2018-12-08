@@ -55,7 +55,8 @@ class CRUDController extends Controller
      */
     public function show($id)
     {
-        //
+        $crud_detail = crud::find($id);
+        return view('crud.show', compact('crud_detail'));
     }
 
     /**

@@ -21,3 +21,4 @@ Route::get('create', 'CRUDController@create')->name('home.create');
 Route::post('store', 'CRUDController@store')->name('home.save');
 Route::get('edit/{id}', 'CRUDController@edit')->name('home.edit');
 Route::patch('update/{id}', 'CRUDController@update')->name('home.update');
+Route::get('show/{id}','CRUDController@show')->name('home.show');
