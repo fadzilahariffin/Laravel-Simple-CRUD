@@ -13,7 +13,8 @@ class CRUDController extends Controller
      */
     public function index()
     {
-        return view('crud.index');
+        $crud_details = crud::all();
+        return view('crud.index', compact('crud_details'));
     }
 
     /**
@@ -43,7 +44,7 @@ class CRUDController extends Controller
         );
         // dd($crud);
 
-        return redirect('/');
+        return redirect('/')->with('flash_success', 'Your data successfully added!');;
     }
 
     /**
