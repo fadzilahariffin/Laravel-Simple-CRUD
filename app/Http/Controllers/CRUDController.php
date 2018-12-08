@@ -100,6 +100,8 @@ class CRUDController extends Controller
      */
     public function destroy($id)
     {
-        //
+        crud::destroy($id);
+
+        return redirect('/')->with('flash_message', 'Product successfully deleted.');
     }
 }

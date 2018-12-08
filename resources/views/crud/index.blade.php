@@ -33,7 +33,7 @@
         <td>
             <a href="{{ url('/show/' . $crud_detail->id ) }}" class='btn btn-info m-r-1em'>Read</a>
             <a href="{{ url('/edit/' . $crud_detail->id ) }}" class='btn btn-primary m-r-1em'>Edit</a>
-            <a href='' onclick=''  class='btn btn-danger'>Delete</a>
+            <a href="{{ url('/delete/' . $crud_detail->id ) }}" class='btn btn-danger'>Delete</a>
         </td>
         </tr>
         @endforeach
@@ -50,7 +50,7 @@
     </div><!--row-->
  
 @endsection
-       
+{{--        
 <script type='text/javascript'>
 function delete_user( id ){
      
@@ -58,7 +58,7 @@ function delete_user( id ){
     if (answer){
         // if user clicked ok, 
         // pass the id to delete.php and execute the delete query
-        window.location = 'delete.php?id=' + id;
+        window.location = '{{ url('/edit/' . $crud_detail->id ) }}' + id;
     } 
 }
-</script>
+</script> --}}
