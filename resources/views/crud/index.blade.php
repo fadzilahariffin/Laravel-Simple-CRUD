@@ -32,7 +32,7 @@
         <td>{{$crud_detail->price}}</td>
         <td>
             <a href='' class='btn btn-info m-r-1em'>Read</a>
-            <a href='' class='btn btn-primary m-r-1em'>Edit</a>
+            <a href="{{ url('/edit/' . $crud_detail->id ) }}" class='btn btn-primary m-r-1em'>Edit</a>
             <a href='' onclick=''  class='btn btn-danger'>Delete</a>
         </td>
         </tr>

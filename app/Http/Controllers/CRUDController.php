@@ -66,7 +66,8 @@ class CRUDController extends Controller
      */
     public function edit($id)
     {
-        //
+        $crud_detail = crud::find($id);
+        return view('crud.edit', compact('crud_detail'));
     }
 
     /**
@@ -78,7 +79,16 @@ class CRUDController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        crud::find($id)->update(
+            [
+                
+                'name'              => $request->name,
+                'description'       => $request->description,
+                'price'             => $request->price,
+            ]
+        );
+
+        return redirect('/')->with('flash_success', 'Product have been updated.');
     }
 
     /**
